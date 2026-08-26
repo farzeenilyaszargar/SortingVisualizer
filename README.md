@@ -2,8 +2,6 @@
 
 Just visualizing sorting algorithms basic ahh shi
 
-  
-
 1\. Bubble Sort 
 
 2\. Selection Sort 
@@ -22,3 +20,10 @@ Just visualizing sorting algorithms basic ahh shi
 
 9\. Radix Sort
 
+  
+
+  
+
+run using: 
+
+     clang++ main.cpp visualiser.cpp sortAlgos.cpp -o visualiser $(pkg\-config --cflags --libs raylib)

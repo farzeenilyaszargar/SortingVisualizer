@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include <raylib.h>
 
 
 
@@ -16,6 +16,7 @@ int* bubbleSort(int arr[], int n)
                 int temp = arr[i];
                 arr[i] = arr[j];
                 arr[j] = temp;
+                WaitTime(0.05);
             }
         }
 
