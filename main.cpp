@@ -1,21 +1,40 @@
 #include <stdio.h>
-#include <sortAlgos.h>
+#include "sortAlgos.h"
+#include "visualiser.h"
+#include <raylib.h>
+
+#define ARRAY_SIZE 20
 
 
 
 
 int main()
 {
-    int algo = 0;
+    const int HEIGHT = 600;
+    const int WIDTH = 800;
+    InitWindow(WIDTH, HEIGHT, "Sorting Visualiser By Fizzy");
 
-    int arr[] = {1,2,3,5, 6, 2, 1, 5, 3, 212, 1};
+    int arr[ARRAY_SIZE] = {20, 5, 80, 45, 30,
+        70, 15, 95, 40, 60,
+        10, 50, 85, 25, 75,
+        35, 90, 55, 65, 100};
+    int n = ARRAY_SIZE;
 
-    
-    int n = sizeof(arr)/sizeof(arr[0]);
+    SetTargetFPS(60);
 
+    while (!WindowShouldClose())
+    {
+        BeginDrawing();
+        ClearBackground(RAYWHITE);
+
+        DrawText("Sorting Visualiser", 20, 20, 30, DARKGRAY);
+
+        drawBars(arr, n);
+
+        EndDrawing();
+    }
 
 
 
     return 0;
-
 }

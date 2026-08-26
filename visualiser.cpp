@@ -1,23 +1,44 @@
 #include <raylib.h>
 
-#define ARRAY_SIZE 20
 
 void drawBars(int arr[], int n)
 {
+    int screenWidth = GetScreenWidth();
+    int screenHeight = GetScreenHeight();
+
+    int graphTop = 120;
+    int graphBottom = screenHeight - 50;
+    int graphHeight = graphBottom-graphTop;
+
+    float barWidth = float(screenWidth / n);
+
+    int maxValue = arr[0];
+
+    for (int i = 0; i<n; i++)
+    {
+        if (arr[i]>maxValue)
+        {
+            maxValue = arr[i];
+        }
+    }
+
+
+    for (int i = 0; i<n; i++)
+    {
+        float percent = (float)arr[i]/maxValue;
+        int barHeight = percent * graphHeight;
+
+        int x = i*barWidth;
+        int y = graphBottom-barHeight;
+
+        DrawRectangle(x+2, y, barWidth-4, barHeight, BLUE);
 
 
 
-}
+    }
 
 
-int main()
-{
-    const int HEIGHT = 1200;
-    const int WIDTH = 800;
-    InitWindow(WIDTH, HEIGHT, "Sorting Visualiser By Fizzy");
-
-    
 
 
-    return 0;
+
 }
