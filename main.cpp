@@ -1,17 +1,7 @@
 #include <stdio.h>
+#include <sortAlgos.h>
 
-int bubbleSort(int arr[], int n)
-{
-    int sorted = {};
 
-    for (int i = 0; i<n; i++)
-    {
-
-    }
-
-    return sorted;
-
-}
 
 
 int main()

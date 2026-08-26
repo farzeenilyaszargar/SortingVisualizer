@@ -4,14 +4,21 @@ Just visualizing sorting algorithms basic ahh shi
 
   
 
-\- bubble sort
+1\. Bubble Sort 
 
-\- selection sort
+2\. Selection Sort 
 
-\- insertion sort
+3\. Insertion Sort 
 
-\- merge sort
+4\. Merge Sort 
 
-\- quick sort
+5\. Quick Sort 
 
-\- heap sort
+6\. Heap Sort 
+
+7\. Shell Sort 
+
+8\. Counting Sort 
+
+9\. Radix Sort
+
