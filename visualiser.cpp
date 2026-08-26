@@ -1,5 +1,5 @@
 #include <raylib.h>
-
+#include "visualiser.h"
 
 void drawBars(int arr[], int n)
 {
@@ -41,4 +41,16 @@ void drawBars(int arr[], int n)
 
 
 
+}
+
+
+void renderFrame(int arr[], int n)
+{
+    BeginDrawing();
+
+    ClearBackground(RAYWHITE);
+
+    drawBars(arr, n);
+
+    EndDrawing();
 }

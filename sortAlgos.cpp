@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <raylib.h>
+#include "visualiser.h"
 
 
-
-int* bubbleSort(int arr[], int n)
+void bubbleSort(int arr[], int n)
 {
 
     for (int i = 0; i<n; i++)
@@ -16,13 +16,15 @@ int* bubbleSort(int arr[], int n)
                 int temp = arr[i];
                 arr[i] = arr[j];
                 arr[j] = temp;
-                WaitTime(0.05);
+                renderFrame(arr, n);
+                WaitTime(0.1);
+
             }
         }
 
     }
 
-    return arr;
+   
 
 }
 
